@@ -8,22 +8,27 @@ public class Dog : Animal
     private int activityLevel;
     public override float CalculateFoodRequirement()
     {
+        dailyFoodConsumption = 0.5f;
+        activityLevel = 3;
+        Debug.Log($"Dog eats {dailyFoodConsumption} kg of food daily with activity {activityLevel}");
+        Debug.Log($"Dog's weekly food requirement: {(dailyFoodConsumption) * activityLevel * 7}");
         return (dailyFoodConsumption) * activityLevel*7;
     }
     public override void MakeSound()
     {
         base.MakeSound();
-        Debug.Log("The animal makes a sound");
+        Debug.Log("Dog barks: Woof Woof!");
     }
     public override void DisplayName()
     {
-        
-        DisplayName();
+        Init("Dog");
+        Debug.Log($"This is a {animalName}");
     }
     private void Start()
     {
         DisplayName();
         MakeSound();
         CalculateFoodRequirement();
+
     }
 }

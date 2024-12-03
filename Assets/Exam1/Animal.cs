@@ -5,9 +5,9 @@ using UnityEngine;
 public abstract class Animal : MonoBehaviour
 {
     protected string animalName;
-    public void Init(string Con)
+    public void Init(string Name)
     {
-
+       animalName = Name;
     }
     public abstract float CalculateFoodRequirement();
     public virtual void MakeSound()
@@ -16,6 +16,6 @@ public abstract class Animal : MonoBehaviour
     }
     public virtual void DisplayName()
     {
-        
+       
     }
 }
