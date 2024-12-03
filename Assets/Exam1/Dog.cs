@@ -10,8 +10,8 @@ public class Dog : Animal
     {
         dailyFoodConsumption = 0.5f;
         activityLevel = 3;
-        Debug.Log($"Dog eats {dailyFoodConsumption} kg of food daily with activity {activityLevel}");
-        Debug.Log($"Dog's weekly food requirement: {(dailyFoodConsumption) * activityLevel * 7}");
+        Debug.Log($"{animalName} eats {dailyFoodConsumption} kg of food daily with activity {activityLevel}");
+        Debug.Log($"{animalName}'s weekly food requirement: {(dailyFoodConsumption) * activityLevel * 7}");
         return (dailyFoodConsumption) * activityLevel*7;
     }
     public override void MakeSound()
